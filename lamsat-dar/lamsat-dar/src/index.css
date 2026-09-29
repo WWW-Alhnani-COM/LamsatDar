@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html { scroll-behavior: smooth; }
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: hidden; }
+body { @apply bg-sand text-char font-sans antialiased; }
+:focus-visible { outline: 2px solid #C5A059; outline-offset: 3px; }
+@media (prefers-reduced-motion: reduce) { * { animation: none !important; transition-duration: .01ms !important; } html { scroll-behavior: auto; } }
